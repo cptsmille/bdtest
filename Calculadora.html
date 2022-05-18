@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <div>
+            <class>
+
+            </class>
+        </div>
+        <title>Calculadora</title>
+        <style>
+            body{
+                font:initial 18pt Arial;
+                background-image: url(https://cdn.wallpapersafari.com/65/28/l8NQZj.jpg);
+                background-repeat: no-repeat; 
+                background-position: center;
+                color: rgb(255, 255, 255);
+                line-height: 40px;
+                text-align: center;
+            }input{
+                font: normal 18pt Arial;
+                width: 100px;
+            }div#res{
+                margin-top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Calculadora</h1>
+        <br><input type="number" name="txtn1" id="txtn1"></br>
+        <br><input type="number" name="txtn2" id="txtn2"></br>
+        <input type="button" value="+" onclick="somar()">
+        <input type="button" value="-" onclick="subtrair()">
+        <input type="button" value="X" onclick="multiplicar()">
+        <input type="button" value="÷" onclick="dividir()">
+        <div id="res">Resultado</div>
+        <input type="button" value="Reset" onclick="Reset()">
+
+        <script>
+            function somar(){
+                var tn1 = window.document.getElementById('txtn1')
+                var tn2 = window.document.getElementById('txtn2')
+                var valor =  window.document.getElementById('res')
+                var n1 = Number(tn1.value)
+                var n2 = Number(tn2.value)
+                var s = n1 + n2
+                valor.innerText = `${s}`
+            }
+
+            function subtrair(){
+                var tn1 = window.document.getElementById('txtn1')
+                var tn2 = window.document.getElementById('txtn2')
+                var valor =  window.document.getElementById('res')
+                var n1 = Number(tn1.value)
+                var n2 = Number(tn2.value)
+                var s = n1 - n2
+                valor.innerText = `${s}`
+            }
+                
+            function multiplicar(){
+                var tn1 = window.document.getElementById('txtn1')
+                var tn2 = window.document.getElementById('txtn2')
+                var valor =  window.document.getElementById('res')
+                var n1 = Number(tn1.value)
+                var n2 = Number(tn2.value)
+                var s = n1 * n2
+                valor.innerText = `${s}`
+            }
+
+            function dividir(){
+                var tn1 = window.document.getElementById('txtn1')
+                var tn2 = window.document.getElementById('txtn2')
+                var valor =  window.document.getElementById('res')
+                var n1 = Number(tn1.value)
+                var n2 = Number(tn2.value)
+                var s = n1 / n2
+                valor.innerText = `${s}`
+            }
+
+            /*function Reset(){
+                if(onclick ("Reset()") = true){
+                    var txtn1 = 0
+                    var txtn2 = 0
+                    var s = 0
+                }else{}
+            }*/
+        </script>
+    </body>
+</html>
